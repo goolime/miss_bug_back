@@ -14,8 +14,11 @@ const corsOptions = {
 }
 
 // App configuration
-app.use(cors(corsOptions))
-app.use(express.static('public'))
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('public'))
+}else{
+    app.use(cors(corsOptions))
+}
 app.use(express.json())
 app.use(cookieParser())
 
