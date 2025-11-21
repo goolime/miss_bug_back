@@ -63,7 +63,7 @@ export async function addBug(req, res) {
     const bugToSave = { title, severity, createdAt , labels }
 
     try {
-        const savedBug = await bugService.save(bugToSave)
+        const savedBug = await bugService.save(bugToSave, req.loginToken)
         res.send(savedBug)
     } catch (err) {
         loggerService.error('Cannot add bug', err)

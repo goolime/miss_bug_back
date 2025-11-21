@@ -123,12 +123,16 @@ async function save(bugToSave,user=null) {
             bugs[bugIdx] = bugToSave
             */
         } else {
-            collection.insertOne(bugToSave)
+            bugToSave.creator={_id: user._id, fullname: user.fullname}
+            bugToSave.createdAt = Date.now()
+            console.log('bugToSave:',bugToSave)
+            const returnid= (await collection.insertOne(bugToSave)).insertedId
             /*
             bugToSave._id = makeId()
-            bugToSave.createdAt = Date.now()
             bugs.push(bugToSave)
             */
+            bugToSave._id = returnid
+            console.log('bugToSave after insert:', bugToSave)
         }
         //await _savebugsToFile()
         return bugToSave
