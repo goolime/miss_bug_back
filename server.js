@@ -37,7 +37,7 @@ app.get('/*all', (req, res) => {
     res.sendFile(path.resolve('public/index.html'))
 })
 
-console.log(process.env)
+//console.log(process.env)
 const PORT = process.env.PORT || 3030
 app.listen(PORT, () => {
     loggerService.info('Up and running on port ' + PORT)

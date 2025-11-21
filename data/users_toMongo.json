@@ -1,0 +1,30 @@
+[
+    { 
+        "fullname" : "Muki Ja", 
+        "username" : "muki", 
+        "password" : "muki1234", 
+        "score" : 100 ,
+        "isAdmin": false
+    },
+    { 
+        "fullname" : "Lili Bo", 
+        "username" : "lili",    
+        "password" : "lili1234", 
+        "score" : 80 ,
+        "isAdmin": false
+    },
+    { 
+        "fullname" : "Kuku Lu", 
+        "username" : "kuku",    
+        "password" : "kuku1234", 
+        "score" : 90 ,
+        "isAdmin": false
+    },
+    { 
+        "fullname" : "Admin User", 
+        "username" : "admin",    
+        "password" : "admin1234", 
+        "score" : 999 ,
+        "isAdmin": true
+    }
+]
