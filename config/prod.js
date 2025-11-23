@@ -1,6 +1,6 @@
 export default {
-    dbURL: process.env.MONGO_URL || 'mongodb+srv://goolime_db_admin:HvbubylzxpZduPe9@cluster0.05cje71.mongodb.net/',
-    dbName: process.env.DB_NAME || 'Projects'
+    dbURL: process.env.MONGO_URL,
+    dbName: process.env.DB_NAME
 }
 
 // export default {
